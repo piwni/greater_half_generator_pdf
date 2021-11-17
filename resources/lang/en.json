@@ -1,0 +1,38 @@
+{
+    "firstName": "Allen",
+    "lastName": "Bullman",
+    "companyName": "Greater Half",
+    "address": {
+        "customerAddress": "726 CUMBERLAND TRACE RD APT 917",
+        "customerZipCode": "42103-9141",
+        "customerCity": "BOWLING GREEN",
+        "customerCountry": "United States of America",
+        "companyAddress": "129 Dishman Ln",
+        "companyZipCode": "42104",
+        "companyCity": "BOWLING GREEN",
+        "companyCountryCode": "US"
+    },
+    "orderInfo": {
+        "orderCode": "647100-#GH123472",
+        "orderCodeBarcode": "647100-#GH123472",
+        "deliveryDate": "10/12/2021",
+        "deliveryForInquires": "1-345370-5-8719-647100-#GH123472",
+        "orderNumber": "#1145303",
+        "orderNumberBarcode": "#1145303",
+        "deliveryCode": "#1146321",
+        "deliveryCodeBarcode": "#1146321",
+        "deliveryNoteID": "10560"
+    },
+    "articleList": {
+        "articleInfo": {
+            "itemQuantity": "1",
+            "articleID": "DO4KEV",
+            "articleFinishes": "Digital printing",
+            "articleDescription": "BELLA+CANVAS UNISEXnMADE IN THE USAnJERSEY T-SHIRT",
+            "articleSize": "3XL",
+            "articleColor": " ",
+            "articleSKU": "X-BC3001U-NV-3XL-VADERLUCK",
+            "articleSKUBarcode": "X-BC3001U-NV-3XL-VADERLUCK"
+        }
+    }
+}

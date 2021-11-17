@@ -22,6 +22,13 @@
     <body style="text-align: center" >
 
     <a href="/invoice" target="_blank" ><h1 style="margin-top:300px">Link</h1></a>
-
+@php
+    $json = '{"countryId":"84","productId":"1","status":"0","opId":"134"}';
+    $json = json_decode($json, true);
+    echo $json['countryId'];
+    echo $json['productId'];
+    echo $json['status'];
+    echo $json['opId'];
+@endphp
     </body>
 </html>

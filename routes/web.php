@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/invoice', function () {
+Route::GET('/invoice', function () {
+//    return view('invoice');
+    $pdf = PDF::loadView('invoice');
+    return $pdf->stream();
+
+});
+Route::POST('/invoice', function () {
 //    return view('invoice');
     $pdf = PDF::loadView('invoice');
     return $pdf->stream();

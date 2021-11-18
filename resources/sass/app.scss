@@ -6,3 +6,30 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+th {
+    border: 1px black;
+    border-style: solid none;
+    text-align: left;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+td {
+    background-color: #DCDCDC;
+    text-align: center;
+
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 10pt;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+}

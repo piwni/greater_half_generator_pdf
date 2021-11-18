@@ -23,8 +23,8 @@
         "deliveryCodeBarcode": "#1146321",
         "deliveryNoteID": "10560"
     },
-    "articleList": {
-        "articleInfo": {
+    "articleList": [
+        {
             "itemQuantity": "1",
             "articleID": "DO4KEV",
             "articleFinishes": "Digital printing",
@@ -33,6 +33,16 @@
             "articleColor": " ",
             "articleSKU": "X-BC3001U-NV-3XL-VADERLUCK",
             "articleSKUBarcode": "X-BC3001U-NV-3XL-VADERLUCK"
+        },
+        {
+            "itemQuantity": "1",
+            "articleID": "DO4K434343434EV",
+            "articleFinishes": "Digital printing",
+            "articleDescription": "BELLA+CANVAS UNISEX\nMADE IN THE USA\nJERSEY T-SHIRT",
+            "articleSize": "3XL",
+            "articleColor": " ",
+            "articleSKU": "X-BC3001U-NV-3XL-VADERLUCK",
+            "articleSKUBarcode": "X-BC3001U-NV-3XL-VADERLUCK"
         }
-    }
+    ]
 }

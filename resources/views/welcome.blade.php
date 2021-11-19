@@ -22,19 +22,5 @@
     <body style="text-align: center" >
 
     <a href="/invoice" target="_blank" ><h1 style="margin-top:300px">Link</h1></a>
-@php
-
-    // Read the JSON file
-    $json = file_get_contents('../storage/data.json');
-
-    // Decode the JSON file
-    $json_data = json_decode($json,true);
-
-    // Display data
-echo $json_data['firstName'];
-
-
-@endphp
-
     </body>
 </html>

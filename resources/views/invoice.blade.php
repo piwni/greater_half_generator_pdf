@@ -11,7 +11,7 @@
         th {
             border: 1px black;
             border-style: solid none;
-            text-align: left;
+            text-align: center;
         }
 
         body {
@@ -38,11 +38,6 @@
     </style>
 </head>
 <body>
-@php
-    $json = file_get_contents('../storage/data.json');
-    $json_data = json_decode($json,true);
-    @endphp
-
 <div id="top">
     <div class="left" style="font-size: 12pt;">
         <p style="font-size: 8pt"> {{$json_data['companyName']}} | {{$json_data['address']['companyAddress']}} | {{$json_data['address']['companyZipCode']}} {{$json_data['address']['companyCity']}}, {{$json_data['address']['companyCountryCode']}}   </p>
@@ -54,8 +49,7 @@
         ORDER #:  {{$json_data['orderInfo']['orderCode']}}
         <div class="barcodeleft" style="margin-top: 10px;">
             @php
-                $json = file_get_contents('../storage/data.json');
-$json_data = json_decode($json,true);
+
                $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
                    echo $generator->getBarcode($json_data['orderInfo']['orderCodeBarcode'], $generator::TYPE_CODE_128);
             @endphp
@@ -67,8 +61,7 @@ $json_data = json_decode($json,true);
             {{$json_data['orderInfo']['deliveryForInquires']}}</p>
         <div class="barcode" style="margin-left: 35px;">
             @php
-                $json = file_get_contents('../storage/data.json');
-    $json_data = json_decode($json,true);
+
                     $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
                         echo $generator->getBarcode($json_data['orderInfo']['orderNumberBarcode'], $generator::TYPE_CODE_128);
             @endphp
@@ -76,8 +69,6 @@ $json_data = json_decode($json,true);
         Order: {{$json_data['orderInfo']['orderNumber']}}
         <div class="barcode" style="margin-left: 35px;">
             @php
-                $json = file_get_contents('../storage/data.json');
-       $json_data = json_decode($json,true);
                    $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
 
                        echo  $generator->getBarcode($json_data['orderInfo']['deliveryCodeBarcode'],$generator::TYPE_CODE_128);
@@ -108,7 +99,7 @@ $json_data = json_decode($json,true);
                 Size: {{$val['articleSize']}} <br>Color: {{$val['articleColor']}}</p>
             </td>
 
-            <td>
+            <td style="margin-left: 10px;">
                 {{$val['articleSKU']}}
                 @php
                                         $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
@@ -117,6 +108,7 @@ $json_data = json_decode($json,true);
             </td>
         </tr>
         @endforeach
+
     </table>
 </div>
 </body>

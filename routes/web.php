@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\urlController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,19 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::GET('/invoice', function () {
-//    return view('invoice');
-    $pdf = PDF::loadView('invoice');
-    return $pdf->stream();
-
-});
-Route::POST('/invoice', function () {
-//    return view('invoice');
-    $pdf = PDF::loadView('invoice');
-    return $pdf->stream();
-
-});
+Route::GET('/invoice', [\App\Http\Controllers\UrlController::class, 'jsonData'])->name('invoice');
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

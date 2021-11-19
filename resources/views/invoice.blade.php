@@ -89,7 +89,7 @@
         </tr>
         @foreach($json_data['articleList'] as $val)
         <tr>
-            <td>1</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{$val['itemQuantity']}}</td>
             <td><p>{{$val['articleID']}}<br><br>
                     Finishes:<br>

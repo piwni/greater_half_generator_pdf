@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::GET('/invoice', [\App\Http\Controllers\UrlController::class, 'jsonData'])->name('invoice');
+Route::post('/invoice', [\App\Http\Controllers\UrlController::class, 'jsonData'])->name('invoice');
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

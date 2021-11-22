@@ -3,10 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invoice</title>
+    <script>
+        window.axios = require('axios');
+
+        window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+        const token = document.head.querySelector('meta[name="csrf-token"]');
+
+        if (token) {
+            window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+        } else {
+            console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+        }
+    </script>
     <style>
         th {
             border: 1px black;
@@ -39,6 +53,7 @@
 </head>
 <body>
 <div id="top">
+    @csrf
     <div class="left" style="font-size: 12pt;">
         <p style="font-size: 8pt"> {{$json_data['companyName']}} | {{$json_data['address']['companyAddress']}} | {{$json_data['address']['companyZipCode']}} {{$json_data['address']['companyCity']}}, {{$json_data['address']['companyCountryCode']}}   </p>
         {{$json_data['firstName']}} {{$json_data['lastName']}}<br>

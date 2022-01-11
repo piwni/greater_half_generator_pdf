@@ -42,7 +42,7 @@
             border-collapse: collapse;
             margin-top: 30px;
             font-size: 10pt;
-            margin-right: 30px !important;
+            margin-right: 15px !important;
         }
 
         #top {

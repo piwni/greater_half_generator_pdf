@@ -42,12 +42,16 @@
             border-collapse: collapse;
             margin-top: 30px;
             font-size: 10pt;
-            margin-right: 30px;
+            margin-right: 30px !important;
         }
 
         #top {
             display: flex;
             justify-content: space-between;
+        }
+        #barcodeSKU
+        {
+            margin-left: 20px !important;
         }
     </style>
 </head>
@@ -114,12 +118,14 @@
                 Size: {{$val['articleSize']}} <br>Color: {{$val['articleColor']}}</p>
             </td>
 
-            <td style="margin-left: 10px;">
+            <td>
                 {{$val['articleSKU']}}
+                <div id="barcodeSKU">
                 @php
                                         $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
              echo $generator->getBarcode( $val['articleSKUBarcode'], $generator::TYPE_CODE_128);
                 @endphp
+                </div>
             </td>
         </tr>
         @endforeach

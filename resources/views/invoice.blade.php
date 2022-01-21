@@ -91,7 +91,7 @@
             @endphp
         </div>
         Delivery: {{$json_data['orderInfo']['deliveryCode']}}
-        <div style="font-size: 8pt; float: right; margin-right: 5px;">{{$json_data['orderInfo']['deliveryNoteID']}}</div>
+        <div style="font-size: 8pt; float: right; margin-right: 5px; margin-bottom: 10px">{{$json_data['orderInfo']['deliveryNoteID']}}</div>
     </div>
 </div>
 <div class="table">

@@ -52,6 +52,7 @@
         #barcodeSKU
         {
             margin-left: 20px !important;
+            margin-right: 20px !important;
         }
     </style>
 </head>
@@ -66,7 +67,7 @@
         {{$json_data['address']['customerZipCode']}} {{$json_data['address']['customerCity']}}<br>
         {{$json_data['address']['customerCountry']}}<br>
         ORDER #:  {{$json_data['orderInfo']['orderCode']}}
-        <div class="barcodeleft" style="margin-top: 10px;">
+        <div class="barcodeleft" style="margin-top: 10px;transform: scale(0.55) !important; margin-right: 700px">
             @php
 
                $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
@@ -78,7 +79,7 @@
             Delivery note {{$json_data['orderInfo']['deliveryDate']}} <br>
             For inquiries: <br>
             {{$json_data['orderInfo']['deliveryForInquires']}}</p>
-        <div class="barcode" style="margin-left: 35px;">
+        <div class="barcodeOrder" style="margin-left: 35px; ">
             @php
 
                     $generator = new Picqer\Barcode\BarcodeGeneratorHTML();

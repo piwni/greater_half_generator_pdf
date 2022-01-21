@@ -121,7 +121,7 @@
 
             <td>
                 {{$val['articleSKU']}}
-                <div id="barcodeSKU" style="transform: scale(0.8) !important;">
+                <div id="barcodeSKU">
                 @php
                                         $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
              echo $generator->getBarcode( $val['articleSKUBarcode'], $generator::TYPE_CODE_128);

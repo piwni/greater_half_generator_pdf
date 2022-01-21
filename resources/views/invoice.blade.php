@@ -117,8 +117,8 @@
 
             <td style="text-align: left;">
 
-                <p style="margin-left: 100px !important;"> {{$val['articleSKU']}} </p>
-                <div id="barcodeSKU" style="transform-origin:top;transform: scale(0.6);margin-left: 40px">
+                <p style="margin-left: 150px !important;"> {{$val['articleSKU']}} </p>
+                <div id="barcodeSKU" style="transform-origin:top;transform: scale(0.6);margin-left: 60px">
                 @php
 
                                         $generator = new Picqer\Barcode\BarcodeGeneratorHTML();

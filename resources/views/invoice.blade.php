@@ -71,8 +71,9 @@
             @endphp
         </div>
     </div>
-    <div class="right" style="border: 3px solid black;float: right; height: 190px; width: 300px; text-align: center"><p>
-            Delivery note {{$json_data['orderInfo']['deliveryDate']}} <br>
+    <div class="right" style="border: 3px solid black;float: right; height: 210px; width: 300px; text-align: center"><p>
+            Delivery note  <br>
+            {{$json_data['orderInfo']['deliveryDate']}}<br>
             For inquiries: <br>
             {{$json_data['orderInfo']['deliveryForInquires']}}</p>
         <div class="barcodeOrder" style="margin-left: 35px; ">
@@ -91,7 +92,7 @@
             @endphp
         </div>
         Delivery: {{$json_data['orderInfo']['deliveryCode']}}
-        <div style="font-size: 8pt; float: right; margin-right: 5px; margin-bottom: 10px">{{$json_data['orderInfo']['deliveryNoteID']}}</div>
+        <div style="font-size: 8pt; float: right; margin-right: 5px;">{{$json_data['orderInfo']['deliveryNoteID']}}</div>
     </div>
 </div>
 <div class="table">
